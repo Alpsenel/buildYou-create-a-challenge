@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <title>Start-challenge-1-new</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/8574fc8ae8.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="cerca">
+        <div class="input-group">
+            <input type="text" class="form-control search-input" placeholder="">
+            <a href=""><button type="button" class="btn search-button"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content" id="first">
+                    <div class="tab-pane fade show active" id="information" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
+                            <div class="col-8" style="margin-bottom: 2em">
+                                <h1>Start<br>a challenge</h1>
+                            </div>
+                            <div class="col-4" style="margin-top: 2em">
+                               <button type="button" class="btn btnDone">done</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row" id="profile-box">
+                                    <div class="col-3 img-profile-small">
+                                    </div>
+                                    <div class="col-9" style="padding-top: 1em;">
+                                        <p class="bold" style="margin-bottom: -1rem;">$name</p><br>
+                                        <p class="bold">$surname</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input data-bind="value: Info.Title" type="text" class="inputTitle form-control" placeholder="Your title" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea data-bind="value: Info.Description" class="inputDesc" name="cmt" cols="40" rows="5" placeholder="insert challenge description*" ></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group categories">
+                                    <select data-bind="options: Info.Categories, optionsText: 'Title', value:Info.SelectedCategoryGuid, optionsValue: 'Guid'" class="form-control"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+									<!-- ko foreach: Info.Tags -->
+                                    <input data-bind="value: Title" class="inputTags form-control" placeholder="insert tags separated by comma or choose from suggestions*">
+									<!-- /ko -->
+                                </div>
+								<button data-bind="click: createGuid">daff</button>
+                            </div>
+                        </div>
+                        <div class="row" style="">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <input data-bind="value: Info.Deadline" type="text" class="form-control" placeholder="choose challenge deadline*" onfocus="(this.type='date')"  id="example-date-input" style="margin-top: 0">
+                                    <a href="#"><button type="button" class="btn search-button"><i class="fa fa-calendar" aria-hidden="true"></i></button></a>
+                                </div>
+                                <h6 style="margin-top: 0.5rem"><b>remember!</b> the deadline of the challenge will be the deadline of its last step.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="row">
+                            <div class="col-8" style="margin-bottom: 2em">
+                                <h1>Start<br>a challenge</h1>
+                            </div>
+                            <div class="col-4" style="margin-top: 2em">
+                                <a href="start-challenge-2-new.html"><button type="button" class="btn">done</button></a><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row" id="profile-box">
+                                    <div class="col-2 img-profile-small">
+                                    </div>
+                                    <div class="col-10" style="padding-top: 1em;">
+                                        <p class="bold" style="margin-bottom: -1rem;">$name</p><br>
+                                        <p class="bold">$surname</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>$challenge-title</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h6>Choose some skills to associate to your challenge</h6>
+                                <div class="row" style="margin-top: 1.5em;">
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox1" id="inlineCheckbox1"> $skill-1
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox2" id="inlineCheckbox2"> $skill-2
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox3" id="inlineCheckbox3"> $skill-3
+                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox4" id="inlineCheckbox4"> $skill-4
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox5" id="inlineCheckbox5"> $skill-5
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox6" id="inlineCheckbox6"> $skill-6
+                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"  name="checkBox7"id="inlineCheckbox7"> $skill-7
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="checkBox8" id="inlineCheckbox8"> $skill-8
+                    </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                        <input class="form-check-input"  type="checkbox" name="checkBox9" id="inlineCheckbox9"> $skill-9
+                    </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="text-align: center;margin-top: 1em;">
+                                    <div class="col align-self-center">
+                                        <a href="#">what is a skill? find out!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="steps" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="row">
+                            <div class="col-8" style="margin-bottom: 2em">
+                                <h1>Start<br>a challenge</h1>
+                            </div>
+                            <div class="col-4" style="margin-top: 2em">
+                                <button type="button" class="btn btnDone">done</button><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row" id="profile-box">
+                                    <div class="col-2 img-profile-small">
+                                    </div>
+                                    <div class="col-10" style="padding-top: 1em;">
+                                        <p class="bold" style="margin-bottom: -1rem;">$name</p><br>
+                                        <p class="bold">$surname</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>$challenge-title</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p><span class="stepsChallengeDeadline" style="text-decoration: underline">challenge deadline</span> <b>$step-last-deadline</b></p>
+                            </div>
+                        </div>
+						
+					<section id="inputContentWrapper">
+							<div class="row">
+								<div class="col-12">
+									<div class="input-group">
+										<input id="stepsTitle" type="text" class="form-control" placeholder="insert step 1 title*">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="input-group">
+										<textarea id="stepsDesc" name="cmt" cols="40" rows="5" maxlength="100" placeholder="insert step 1 description"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 1em; margin-bottom: 1.5em;">
+								<div class="col-12">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="insert step 1 deadline*" onfocus="(this.type='date')" value="" id="example-date-input-steps" required style="margin-top: 0;">
+										<a href="#"><button type="button" class="btn search-button"><i class="fa fa-calendar" aria-hidden="true"></i></button></a>
+									</div>
+								</div>
+							</div>
+							<div  id="recursive" class="row">
+								<div class="col-6">
+								   <button type="button" class="btn btnAnotherStep">add another step</button>
+								</div>
+								<div class="col-6">
+									<h6 style="cursor: pointer;float: right;" data-toggle="modal" data-target="#add-substep">do you need a more detailed path?<br><b>add substeps within this step!</b></h6>
+								</div>
+							</div>
+				</section>
+				
+
+                        <div class="modal fade" id="add-substep" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-8" style="padding-top: 0.6em;">
+                                                <p>Add substep1 to the step1</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button"  class="btn btnDone">done</button><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="insert substep 1 title*">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row collapse" id="another-substep">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="insert substep 2 title*">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 1em;">
+                                            <div class="col-4" style="margin-top: 6em;">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                            <div class="col-6 offset-2">
+                                                <a href="#another-substep" data-toggle="collapse"><button type="button" class="btn">add another substep</button></a><br>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#" style="text-align: right;">what is a substep? <b>find out!</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="add-substep2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-8" style="padding-top: 0.6em;">
+                                                <p>Add substep1 to the step2</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" class="btn btnDone">done</button><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="insert substep 1 title*">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row collapse" id="another-substep2">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="insert substep 2 title*">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="margin-top: 1em;">
+                                            <div class="col-4" style="margin-top: 6em;">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                            <div class="col-6 offset-2">
+                                                <a href="#another-substep2" data-toggle="collapse"><button type="button" class="btn">add another substep</button></a><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#" style="text-align: right;">what is a substep? <b>find out!</b></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+	
+	<!-- MOVED NAV FROM INSIDE OF THE CONTAINTER TO THE OUTSIDE ALSO CHANGED SOME CSS!  -->
+	 <nav class="nav nav-tabs" id="myTab" role="tablist">
+                    <a class="nav-item nav-link active navFirst" id="nav-home-tab" data-toggle="tab" href="#information" role="tab" aria-controls="nav-home" aria-selected="true">Information</a>
+                    <a  class="nav-item nav-link navSecond" id="nav-profile-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="nav-profile" aria-selected="false">Skills</a>
+                    <a class="nav-item nav-link navThird" id="nav-profile-tab" data-toggle="tab" href="#steps" role="tab" aria-controls="nav-profile" aria-selected="false">Steps</a>
+                </nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/1.0.2/knockout.validation.min.js"></script>
+	<script src="js/function.js"></script>
+</body>
+
+</html>

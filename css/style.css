@@ -1,0 +1,541 @@
+:root{
+    --main:#FE5721;
+}
+
+
+body{
+    color:var(--main);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.h1, h1 {
+ font-size: 2.25rem;
+font-weight: 700;
+}
+
+
+.h2, h2 {
+    font-size: 1.875rem;
+font-weight: 700;
+}
+
+h3{
+        font-size: 1.5rem;
+font-weight: 700;
+}
+
+h4{
+        font-size: 1.25rem;
+font-weight: 700;
+}
+
+h5{
+    font-size: 0.875rem;
+        line-height: 1.5rem;
+}
+
+
+
+.h6, h6 {
+    font-size: 0.5rem;
+text-decoration: underline;
+    line-height: 0.8rem;
+}
+
+
+p{
+    font-size: 0.625rem;
+}
+
+a{
+    font-size: 0.625rem;
+    text-decoration: underline;
+    font-weight: 700;
+    color:var(--main);
+}
+
+.bold{
+    font-weight: 700;
+}
+
+
+#cerca{
+margin-bottom: 2em;
+}
+
+.container-fluid{
+        padding: 0;
+}
+
+.container{
+    padding-bottom: 2em;
+}
+
+.title-buildyou{
+    text-align: center;
+    margin-top: 2em;    
+}
+
+
+
+.input-group .form-control{
+margin-top: 1.5em;
+    border-radius: 0;
+    border-color: #FE5721;
+    font-size: 0.625rem;
+    padding: 0.5rem;
+    color: #f45822;
+}
+
+
+.link{
+margin-top: 3em;
+}
+
+.edit{
+margin-top: 3em;
+        display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+       margin-bottom: 5em;
+}
+
+
+.enter{
+-webkit-appearance: button;
+    background-color: #FE5721;
+    border: none;
+    width: 50%;
+    border-radius: 2rem;
+    margin-top: 10em;
+    padding: 0.5rem;
+}
+
+.input-group .form-control::-webkit-input-placeholder{
+    color:#FE5721;
+}
+
+.input-group .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+
+.input-group .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+
+.input-group .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #909;
+}
+
+.input-group .form-control::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #909;
+}
+
+button, html [type=button] {
+    -webkit-appearance: button;
+    background-color: #f45722;
+    border: none;
+    border-radius: 2rem;
+        padding: 0.5rem;
+    font-size: 0.625rem;
+    color:#fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.img-profile{
+   background: url(../img/woman-1254453_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 6em;
+    background-position: center center;
+        max-width: 6em;
+        min-width: 6em;
+}
+
+.img-profile-small{
+   background: url(../img/woman-1254453_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 4em;
+    background-position: center center;
+        max-width: 4em;
+    min-width: 4em;
+}
+
+.img-profile-smallest{
+   background: url(../img/businessman-2051664_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 2.4em;
+    background-position: center center;
+    max-width: 2.4em;
+}
+
+.profile-description{
+    font-size: 0.8rem;
+    margin-top: 3em;
+}
+
+.name{
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+        color: #f45722;
+}
+
+#profile-box{
+    padding: 1em;
+}
+
+.challenge-input{
+    height: 10em;
+}
+
+
+.search-button{
+
+    float: left !important;
+    border-radius: 0 !important;
+    background-color: #fff !important;
+    color: #f45822 !important;
+    border: solid 1px !important;
+    border-left: none !important;
+}
+
+.search-input{
+width: 90% !important;
+margin-top: 0 !important;
+border-right: none !important;
+}
+
+label{
+    color: #f45822;
+    font-size: 0.9rem;
+}
+
+.form-control{
+font-size: 0.625rem;
+    color: #f45822;
+    border-color: #f45822;
+}
+
+#tag p{
+float: left;
+    margin-left: 0.3em;
+    color: #fff;
+    background-color: #f45822;
+    padding: 0.3em;
+}
+
+#read-description, #read-step{
+    color: #f45822;
+    font-size: 0.7rem;
+}
+
+textarea{
+border-color: #f45822;
+    width: 100%;
+    padding: 0.5em;
+    color: #f45822;
+    margin-top: 1.5em;
+    font-size: 0.625rem;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #f45822;
+    font-size: 0.7rem;
+}
+
+textarea::-moz-placeholder{
+color: #f45822;
+        font-size: 0.7rem;
+}
+
+textarea:-ms-input-placeholder {
+    color: #f45822;
+        font-size: 0.7rem;
+}
+
+textarea:-o-input-placeholder { 
+    color: #f45822;
+        font-size: 0.7rem;
+}
+
+.box-step{
+    border: solid 1px #f45822;
+    padding-top: 1em;
+        margin-bottom: 1rem;
+    margin-top: 1em;
+}
+
+.box-step p, .resume-step p{
+    margin-bottom: 0.5rem;
+}
+
+.resume-step{
+    margin-top: 1rem;
+}
+
+.congrats{
+            border: solid 1px #f45722;
+    padding: 2.5em;
+    border-radius: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.play-icon{
+        float: left;
+    color: #f45822;
+    font-size: 2rem !important;
+    margin-right: 0.5rem;
+}
+
+.play-icon-small{
+      float: left;
+    color: #f45822;
+    font-size: 1.5rem !important;
+    margin-right: 0.5rem;
+}
+
+.icon-small{
+     color: #f45822;
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+
+.video-icon{
+    color: #f45822;
+    font-size: 2rem !important;
+}
+
+.icon-big{
+   color: #f45822;
+    font-size: 2rem !important;  
+}
+
+.icon-biggest{
+     color: #f45822;
+    font-size: 3rem !important;    
+}
+
+.box-video{
+    height: 10em;
+    border: solid 1px #f45722;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+}
+
+.box{
+      border: solid 1px #f45722;
+    padding-top: 2em;
+}
+
+.center{
+        display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+}
+/*
+##############
+CHANGED CSS CLASSES
+##############
+*/
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 10;
+}
+
+.nav-tabs .nav-link {
+	border: none;
+    width: 33.33%;
+    text-align: center;
+    color: white;
+	background: rgba(254,87,33,0.6);
+    font-size: 0.9rem;
+    border-radius: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.nav-tabs a {
+	text-decoration: none;
+}
+
+/*
+################
+CHANGED CSS CLASSES ENDING
+################
+*/
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #f45822;
+    border: none;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid transparent;
+        margin-top: 1em;
+
+}
+
+#coach h6{
+    margin-bottom: 2px;
+    font-size: 0.7rem;
+}
+
+#chas img{
+        height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
+
+.done-off{
+        font-size: 2rem;
+    color: rgba(244, 87, 34, 0.6);
+    margin-top: 1.5em;
+}
+
+.done-on{
+        font-size: 2rem;
+    color: #f45822;
+    margin-top: 1.5em;    
+}
+
+.done-on a{
+   color: #f45822; 
+}
+
+.categories{
+        margin-top: 0.9em;
+    margin-bottom: 0;
+}
+
+.tab-content>.active {
+    display: block;
+    padding-bottom: 2em;
+}
+
+.done{
+    margin-top: 3rem;
+}
+
+.modal{
+        background-color: #f4572245;
+}
+
+.modal-content{
+     top: 15em;
+}
+
+.modal-body{
+        min-height: 15em;
+}
+
+.form-check-label {
+    padding-left: 1rem;
+    margin-bottom: 0;
+    font-size: 0.625rem;
+}
+
+#myTab-2 a{
+    width: 50% !important;
+}
+
+.allposts-box{
+       border: solid 1px #f45722;
+    margin-bottom: 2em;
+}
+
+.allposts-box h6{
+    font-size: 0.6rem;
+    margin-top: -0.2rem;
+}
+
+.role{
+    border: solid 1px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.numbers p{
+    font-size: 0.6rem;
+    color:#f45722;
+    margin-bottom: 0.3rem;
+}
+
+#interactions div{
+    padding: 0;
+    margin-left: 0.5em;
+}
+
+#interactions{
+margin-top: 0.5em;
+}
+
+#coach p{
+    margin-bottom: 0;
+}
+
+/*
+##################
+ADDED CSS CLASSES
+##################
+*/
+.btnAnotherStep {
+	opacity: 0.6;
+}
+.stepsRadioButtons{
+	position: relative;
+	right: 15px;
+	top: 4px;
+}
+.validationMessage {
+	color: red;
+	font-weight: bold;
+	font-size: 0.625rem;
+	position: absolute;
+	left: 4%;
+}
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+</style>
